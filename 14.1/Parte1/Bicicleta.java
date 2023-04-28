@@ -1,5 +1,4 @@
 package Parte1;
-
 public class Bicicleta extends Vehiculo {
 
   private int pinones; // número de piñones

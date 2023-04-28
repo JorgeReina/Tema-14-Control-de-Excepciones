@@ -1,3 +1,5 @@
+package Parte2;
+
 import java.util.Scanner;
 
 /**
