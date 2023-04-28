@@ -4,6 +4,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Practica 14.2, parte 1
+ * 
+ * @author Jorge Reina Romero
+ */
+
 public class ProbarExcepciones {
   public static void main(String[] args) {
     
