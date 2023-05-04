@@ -1,7 +1,11 @@
+package Parte2;
+
 import java.util.Scanner;
 
 /**
  * Practica 14.2, parte 2
+ * 
+ * Ejercicio 1
  * 
  * @author Jorge Reina Romero
  */
