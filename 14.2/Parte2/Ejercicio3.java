@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,18 +18,20 @@ public class Ejercicio3 {
       e.printStackTrace();
     }
   }
-=======
-package Parte2;
+}
 
-import java.util.Scanner;
 
 /**
+ * package Parte2;
+ * import java.util.Scanner;
+ * 
+ * 
  * Practica 14.2, parte 2
  * 
  * Ejercicio 3
  * 
  * @author Jorge Reina Romero
- */
+ 
 
 public class Ejercicio3 {
 
@@ -62,7 +63,4 @@ public class Ejercicio3 {
       throw e;
 
     }
-  }
-  
->>>>>>> 14ac5d4fe1f6c087c6cf9135190b6a9ce9c73880
-}
+  } */
