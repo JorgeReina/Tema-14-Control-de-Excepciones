@@ -7,7 +7,6 @@ public class PruebaVehiculos {
     boolean repetir = true;
 
     do {
-      try{
         int opcion = 0;
         int km;
         
@@ -25,21 +24,37 @@ public class PruebaVehiculos {
           System.out.println("8. Salir");
           System.out.println("Elige una opción (1-8): ");
           
-          opcion = Integer.parseInt(System.console().readLine());
+          String opcionStr = System.console().readLine();
+          if (isNumeric(opcionStr)) {
+            opcion = Integer.parseInt(opcionStr);
+          } else {
+            System.out.println("Entrada inválida. Intente nuevamente.");
+            continue;
+          }
           
           switch (opcion) {
             case 1:
               System.out.print("¿Cuántos kilómetros quiere recorrer? ");
-              km = Integer.parseInt(System.console().readLine());
-              bhSpeedrom.recorre(km);
+              String kmStr = System.console().readLine();
+              if (isNumeric(kmStr)) {
+                km = Integer.parseInt(kmStr);
+                bhSpeedrom.recorre(km);
+              } else {
+                System.out.println("Entrada inválida. Intente nuevamente.");
+              }
               break;
             case 2:
               bhSpeedrom.hazCaballito();
               break;
             case 3:
               System.out.print("¿Cuántos kilómetros quiere recorrer? ");
-              km = Integer.parseInt(System.console().readLine());
-              saab93.recorre(km);
+              kmStr = System.console().readLine();
+              if (isNumeric(kmStr)) {
+                km = Integer.parseInt(kmStr);
+                saab93.recorre(km);
+              } else {
+                System.out.println("Entrada inválida. Intente nuevamente.");
+              }
               break;
             case 4:
               saab93.quemaRueda();
@@ -55,12 +70,23 @@ public class PruebaVehiculos {
             case 7:
               System.out.print("Los vehículos llevan recorridos ");
               System.out.println(Vehiculo.getKilometrosTotales() + " Km");
+              break;
             default:
+              System.out.println("Opción inválida. Intente nuevamente.");
+              break;
           } // switch
         } // while
-      } catch (Exception e) {
-        System.out.println("El dato introducido no es valido");
-        }
+
+        System.out.println("¿Desea repetir? (true/false)");
+        String repetirStr = System.console().readLine();
+        repetir = Boolean.parseBoolean(repetirStr);
+
     } while (repetir);
   }
+
+  // comprueba si la cadena es un número
+  private static boolean isNumeric(String str){
+    return str != null && str.matches("[0-9.]+");
+  }
+
 }
