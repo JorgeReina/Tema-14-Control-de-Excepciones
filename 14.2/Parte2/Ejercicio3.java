@@ -1,14 +1,37 @@
-package Parte2;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
 
-import java.util.Scanner;
+public class Ejercicio3 {
+  public static void main(String[] args) {
+    ArrayList<Exception> excepciones = new ArrayList<Exception>();
+    
+    excepciones.add(new NumberFormatException());
+    excepciones.add(new IOException());
+    excepciones.add(new FileNotFoundException());
+    excepciones.add(new IndexOutOfBoundsException());
+    excepciones.add(new ArithmeticException());
+    
+    try {
+      throw excepciones.get((int)(Math.random() * 6));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
 
 /**
+ * package Parte2;
+ * import java.util.Scanner;
+ * 
+ * 
  * Practica 14.2, parte 2
  * 
  * Ejercicio 3
  * 
  * @author Jorge Reina Romero
- */
+ 
 
 public class Ejercicio3 {
 
@@ -40,6 +63,4 @@ public class Ejercicio3 {
       throw e;
 
     }
-  }
-  
-}
+  } */
